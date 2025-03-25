@@ -3,7 +3,7 @@ export const projectData = [
     title: "Cool Space Facts",
     link: "https://coolspacefacts.com/",
     date: "2023 - 2024",
-    image: "./src/images/cool_space_facts.png",
+    image: "./public/images/cool_space_facts.png",
     tagsText: [
       "HTML5", "CSS3", "JavaScript", "React"
     ],
@@ -19,7 +19,7 @@ export const projectData = [
     title: "Tile Game",
     link: "/app/tilegame.html",
     date: "2024",
-    image: "./src/images/tile_game.png",
+    image: "./public/images/tile_game.png",
     tagsText: [
       "HTML5", "CSS3", "JavaScript", "React"
     ],
