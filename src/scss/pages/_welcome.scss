@@ -1,0 +1,137 @@
+@use '../util' as u;
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 600px;
+  height: 100vh;
+  margin-top: 0;
+
+  &__title {
+    font-size: clamp(3rem, -3.3529rem + 17.6471vw, 9rem);
+    line-height: 80%;
+    margin-top: 25px;
+    margin-bottom: 0;
+    transition: 0.2s;
+    opacity: 0;
+  }
+
+  &__subtitle {
+    font-size: clamp(1.5rem, -1.1471rem + 7.3529vw, 4rem);
+    margin-bottom: 50px;
+    transition: 0.2s;
+    opacity: 0;
+  }
+
+  &__arrow {
+    color: #010101;
+    font-size: clamp(3rem, 1.9412rem + 2.9412vw, 4rem);
+    opacity: 0;
+
+    &.active {
+      text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+      color: white;
+      transition: 0.5s;
+      transform: translateY(100%);
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: clamp(4rem, -0.2353rem + 11.7647vw, 8rem);
+  margin-top: 50px;
+  transition: 0.2s;
+
+  &__github:hover {
+    transform: scale(0.9);
+  }
+
+  &__linkedin:hover {
+    transform: scale(0.9);
+  }
+}
+
+.social a {
+  pointer-events: none;
+  color: #010101;
+}
+
+.social i {
+  opacity: 0;
+}
+
+.colour-picker-active i {
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+}
+
+.lights {
+  position: relative;
+  width: 100%;
+}
+
+.colour-picker {
+  display: grid;
+  grid-template-columns: 1fr 10fr 10fr 1fr;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  transition: 0.4s;
+  z-index: 1;
+  overflow: hidden;
+  
+  &--blue {
+    color: var(--blue);
+  }
+
+  &--green {
+    color: var(--green);
+  }
+
+  &--purple {
+    color: var(--purple);
+  }
+
+  &--yellow {
+    color: var(--yellow);
+  }
+
+  &.active {
+    width: 80%;
+
+    @include u.breakpoint(small) {
+      width: 70%;
+    }
+
+    @include u.breakpoint(medium) {
+      width: 60%;
+    }
+
+    @include u.breakpoint(large) {
+      width: 50%;
+    }
+  }
+
+}
+
+.colour-picker button {
+  border: none;
+  background: none;
+  width: 20px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  cursor: pointer;
+}
+
+.colour-picker.active button {
+  width: 50px;
+}

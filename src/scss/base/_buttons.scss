@@ -1,0 +1,60 @@
+.button {
+  border: none;
+  border-radius: 0;
+  background: var(--blue);
+  color: black;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: clamp(1.25rem, 0.4559rem + 2.2059vw, 2rem);
+  font-family: Agency FB, Agency FB Thin, sans-serif;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: scale(0.9);
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 1);
+}
+
+.button:active {
+  transform: scale(0.8);
+}
+
+.lightbulb {
+  margin-top: -22px;
+  margin-right: 5px;
+  border: none;
+  background: none;
+  font-size: clamp(5rem, 3.9412rem + 2.9412vw, 6rem);
+  color: #666;
+  transition: 0.2s;
+  transform: rotate(180deg);
+  cursor: pointer;
+  animation: wiggle 2s infinite;
+  position: relative;
+  z-index: 2;
+
+  &.active {
+    color: white;
+    animation: none;
+  }
+}
+
+.lightbulb:hover {
+  animation: none;
+  transform: rotate(180deg) scale(0.9);
+}
+
+.lightbulb:active {
+  transform: rotate(180deg) scale(0.8);
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(180deg); }
+ 70% { transform: rotate(180deg); }
+ 75% { transform: rotate(185deg); }
+ 80% { transform: rotate(175deg); }
+ 85% { transform: rotate(185deg); }
+ 95% { transform: rotate(175deg); }
+100% { transform: rotate(180deg); }
+}
