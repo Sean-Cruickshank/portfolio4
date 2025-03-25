@@ -114,7 +114,7 @@ p {
   border: none;
   background: none;
   font-size: clamp(5rem, 3.9412rem + 2.9412vw, 6rem);
-  color: red;
+  color: green;
   transition: 0.2s;
   transform: rotate(180deg);
   cursor: pointer;
