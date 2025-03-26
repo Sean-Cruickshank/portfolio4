@@ -9,6 +9,7 @@
 
   &__row-one, &__row-two, &__row-three {
     margin-bottom: 20px;
+    padding-bottom: 0;
     display: flex;
     justify-content: center;
     gap: 5px;
@@ -42,6 +43,10 @@
     animation: fadeIn;
     animation-duration: 1s;
     animation-iteration-count: 1;
+  }
+
+  &__icon {
+    color: var(--text);
   }
 }
 

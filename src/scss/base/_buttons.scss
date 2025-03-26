@@ -1,8 +1,8 @@
 .button {
   border: none;
   border-radius: 0;
-  background: var(--blue);
-  color: black;
+  background: var(--text);;
+  color: white;
   padding: 4px 10px;
   cursor: pointer;
   font-size: clamp(1.25rem, 0.4559rem + 2.2059vw, 2rem);
@@ -26,7 +26,7 @@
   border: none;
   background: none;
   font-size: clamp(5rem, 3.9412rem + 2.9412vw, 6rem);
-  color: green;
+  color: #666;
   transition: 0.2s;
   transform: rotate(180deg);
   cursor: pointer;

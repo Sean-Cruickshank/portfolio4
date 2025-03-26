@@ -9,7 +9,7 @@
 
   &__card img {
     width: 300px;
-    border: solid 1px white;
+    border: solid 3px var(--text);
   }
 
   &__title {
@@ -39,5 +39,10 @@
 
   &__icon {
     font-size: clamp(2rem, 0.9412rem + 2.9412vw, 3rem);
+    color: var(--text);
+  }
+
+  &__link {
+    color: var(--text);
   }
 }

@@ -7,57 +7,7 @@ sideNavArray.forEach((page) => {
   })
 })
 
-// Sets up functionality for all of the colour picker buttons
 let colourVal = 'blue'
-colourList.forEach((colour) => {
-
-  // Creates the onClick event for each button
-  document.querySelector(`.colour-picker--${colour}`).addEventListener('click', () => {
-    colourVal = colour
-
-      // Removes the glowing effect from any active button
-      document.querySelectorAll('.colour-picker-active').forEach((item) => {
-        item.classList.remove('colour-picker-active')
-      })
-
-    // Applies the glowing effect to the new active button
-    document.querySelector(`.colour-picker--${colour}`).classList.add('colour-picker-active')
-    
-    // Replaces the existing theme for all single-use classes
-    glowingArray.forEach((element) => {
-      document.querySelector(element).classList.remove('glowing--blue', 'glowing--green', 'glowing--purple', 'glowing--yellow')
-    })
-    glowingArray.forEach((element) => {
-      document.querySelector(element).classList.add(`glowing--${colour}`)
-    })
-
-    // Replaces the colour theme for the sidenav
-    sideNavArray.forEach((page) => {
-      document.querySelector(page.class).classList.remove('blue', 'green', 'purple', 'yellow')
-      document.querySelector(page.class).classList.add(colourVal)
-    })
-
-    // Replaces the colour theme for all multi-use classes
-    glowingArrayAll.forEach((element) => {
-      document.querySelectorAll(element).forEach((icon) => {
-        icon.classList.remove('glowing--blue', 'glowing--green', 'glowing--purple', 'glowing--yellow')
-      })
-      document.querySelectorAll(element).forEach((icon) => {
-        icon.classList.add(`glowing--${colourVal}`)
-      })
-    })
-
-    // Adds the theme colour to image borders
-    document.querySelectorAll('.projects__image').forEach((image) => {
-    image.style.border = `3px solid var(--${colourVal})`
-    })
-
-    // Replaces the colour theme for buttons
-    document.querySelectorAll('.button').forEach((button) => {
-      button.style.backgroundColor = `var(--${colourVal}`
-    })
-  })
-})
 
 let lightbulbFirstTrigger = false;
 let lightStatus = false
@@ -92,7 +42,7 @@ function triggerLightbulb() {
       if (element === '.social__github') {
         setTimeout(() => {
           if (lightStatus) {
-            document.querySelector(element).classList.add(`glowing--${colourVal}`)
+            document.querySelector(element).classList.add(`glowing`)
           }
         },1000)
 
@@ -100,7 +50,7 @@ function triggerLightbulb() {
       } else if (element === '.social__linkedin') {
         setTimeout(() => {
           if (lightStatus) {
-            document.querySelector(element).classList.add(`glowing--${colourVal}`)
+            document.querySelector(element).classList.add(`glowing`)
           }
         },1500)
 
@@ -110,29 +60,20 @@ function triggerLightbulb() {
           if (lightStatus) {
             document.querySelector(element).classList.add('active')
           }
-        },2000)
+        },500)
 
       // All other single-use classes have the effect applied instantly
       } else {
-        document.querySelector(element).classList.add(`glowing--${colourVal}`)
+        document.querySelector(element).classList.add(`glowing`)
       }
     })
 
     // Adds the "glowing" effect for all multi-use classes
     glowingArrayAll.forEach((element) => {
       document.querySelectorAll(element).forEach((icon) => {
-        icon.classList.add(`glowing--${colourVal}`)
+        icon.classList.add(`glowing`)
       })
     })
-
-    // Adds the theme colour to image borders
-    document.querySelectorAll('.projects__image').forEach((image) => {
-      image.style.border = `2px solid var(--${colourVal})`
-    })
-
-    // Also activates the lightbulb and colour picker
-    document.querySelector('.lightbulb').classList.add('active')
-    document.querySelector('.colour-picker').classList.add('active')
 
     // Reveals sections when lightbulb is turned on
     document.querySelectorAll('.section').forEach((section) => {
@@ -168,10 +109,7 @@ function triggerLightbulb() {
   }
 }
 
-// Trigger lightbulb when clicked
-document.querySelector('.lightbulb').addEventListener('click', () => {  
-  triggerLightbulb()
-})
+triggerLightbulb()
 
 window.addEventListener('scroll', () => {
   const position = Math.floor(scrollY);

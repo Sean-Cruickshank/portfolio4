@@ -2,10 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  min-height: 240px;
+  min-height: 120px;
+  margin-top: 120px;
+  background-color: var(--text);
 }
 
 .footer i {
   margin-bottom: 25px;
   width: max-content;
+  color: #febd71;
 }
