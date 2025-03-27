@@ -1,13 +1,27 @@
 .footer {
   display: flex;
-  justify-content: center;
-  align-items: end;
-  min-height: 120px;
-  margin-top: 120px;
+  flex-direction: column;
   background-color: var(--text);
+  padding-top: 25px;
+
+  &__sections, &__projects, &__contacts {
+    font-size: 0.8rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  &__sections a, &__projects a, &__contacts a {
+    color: #febd71;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 .footer i {
+  margin-top: 25px;
   margin-bottom: 25px;
   width: max-content;
   color: #febd71;

@@ -60,7 +60,7 @@ function triggerLightbulb() {
           if (lightStatus) {
             document.querySelector(element).classList.add('active')
           }
-        },500)
+        },2000)
 
       // All other single-use classes have the effect applied instantly
       } else {

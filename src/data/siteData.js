@@ -64,12 +64,12 @@ export const sideNavArray =
     id: 'qualifications',
     class: '.sidenav__qualifications',
     top: 3342,
-    bottom: 3875
+    bottom: 4150
   },
   {
     id: 'contact',
     class: '.sidenav__contact',
-    top: 3875,
+    top: 4150,
     bottom: 9999
   }
 ]

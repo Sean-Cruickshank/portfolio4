@@ -63,6 +63,10 @@ h3 {
   font-size: clamp(1.5rem, -0.0882rem + 4.4118vw, 3rem);
 }
 
+.heading {
+  padding-top: 50px;
+}
+
 a {
   text-decoration: none;
 }
@@ -161,7 +165,7 @@ i {
 }
 
 .sidenav {
-  color: white;
+  color: #333;
   position: fixed;
   top: 40%;
   left: 7%;
@@ -175,7 +179,7 @@ i {
 .sidenav--active {
   margin-left: 10px;
   transition: 0.2s;
-  color: #333;
+  color: #eee;
 }
 
 .sidenav a {
@@ -212,11 +216,12 @@ i {
 .welcome__title {
   font-size: clamp(3rem, -3.3529rem + 17.6471vw, 9rem);
   line-height: 80%;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 0;
   transition: 1s;
   opacity: 0;
   color: var(--text);
+  padding-top: 50px;
 }
 .welcome__subtitle {
   font-size: clamp(1.5rem, -1.1471rem + 7.3529vw, 4rem);
@@ -235,6 +240,11 @@ i {
   transform: translateY(100%);
   cursor: pointer;
   opacity: 1;
+}
+@media (min-width: 992px) {
+  .welcome__arrow.active {
+    transform: translateY(50%);
+  }
 }
 
 .social {
@@ -443,6 +453,9 @@ i {
 .qualifications__list p {
   margin: 0 auto;
 }
+.contact {
+  min-height: 100vh;
+}
 .contact__list {
   display: flex;
   width: 70%;
@@ -462,14 +475,26 @@ i {
 
 .footer {
   display: flex;
-  justify-content: center;
-  align-items: end;
-  min-height: 120px;
-  margin-top: 120px;
+  flex-direction: column;
   background-color: var(--text);
+  padding-top: 25px;
+}
+.footer__sections, .footer__projects, .footer__contacts {
+  font-size: 0.8rem;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.footer__sections a, .footer__projects a, .footer__contacts a {
+  color: #febd71;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .footer i {
+  margin-top: 25px;
   margin-bottom: 25px;
   width: -moz-max-content;
   width: max-content;

@@ -17,7 +17,7 @@ projectData.forEach((project) => {
   projectListHTML += `
     <div class="projects__card">
       <div class="projects__title">
-      <h3 class="heading">${project.title}</h3>
+      <h3 class="">${project.title}</h3>
       <a
         title=${project.link}
         target="_blank"

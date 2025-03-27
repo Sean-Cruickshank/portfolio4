@@ -1,5 +1,5 @@
 .sidenav {
-  color: white;
+  color: #333;
   position: fixed;
   top: 40%;
   left: 7%;
@@ -14,7 +14,7 @@
   &--active {
     margin-left: 10px;
     transition: 0.2s;
-    color: #333;
+    color: #eee;
   }
 }
 
