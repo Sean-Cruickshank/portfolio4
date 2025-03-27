@@ -143,3 +143,5 @@ window.addEventListener('scroll', () => {
     },750)
   }
 })
+
+console.log('hi')
