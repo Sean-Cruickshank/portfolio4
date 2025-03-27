@@ -108,14 +108,15 @@ let timer = 300
 
 const endMessageElement = document.querySelector('.js-end-message')
 
+const resetHighScoreButton = document.querySelector(".reset-score-button");
+const startGameButton = document.querySelector('.js-start-game-button');
+const stopGameButton = document.querySelector('.js-stop-game-button');
+
 function playGame() {
-  const startGameButtonElement = document.querySelector('.js-start-game-button');
-  const stopGameButtonElement = document.querySelector('.js-stop-game-button');
   const tipElement = document.querySelector('.js-tip');
-  const resetHighScoreButton = document.querySelector(".reset-score-button");
   tipElement.classList.remove('hidden');
-  startGameButtonElement.classList.add('hidden');
-  stopGameButtonElement.classList.remove('hidden');
+  startGameButton.classList.add('hidden');
+  stopGameButton.classList.remove('hidden');
   setValues();
   renderGrid();
   gameActive = true
@@ -135,8 +136,8 @@ function playGame() {
       selectElement.classList.remove('button-disabled')
       resetHighScoreButton.disabled = false
       resetHighScoreButton.classList.remove('button-disabled')
-      startGameButtonElement.classList.remove('hidden');
-      stopGameButtonElement.classList.add('hidden');
+      startGameButton.classList.remove('hidden');
+      stopGameButton.classList.add('hidden');
       endMessageElement.classList.remove('hidden')
       tipElement.classList.add('hidden');
       generateEndMessage()
@@ -184,7 +185,6 @@ endMessageElement.innerHTML =
 
 function closeEndMessage() {
   endMessageElement.classList.add('hidden')
-  console.log('test')
 }
 
 function resetHighScore() {
@@ -244,7 +244,6 @@ function checkPos(move) {
 }
 
 function setColourPicker() {
-  console.log('test')
   selectElement.innerHTML = `
   <select class="colour-select js-colour-select" name="colour" id="colour-select">
     <option value="blue">Blue</option>
@@ -265,3 +264,15 @@ function setColourPicker() {
 }
 
 setColourPicker()
+
+resetHighScoreButton.addEventListener('click', () => {
+  resetHighScore()
+})
+
+startGameButton.addEventListener('click', () => {
+  playGame()
+})
+
+stopGameButton.addEventListener('click', () => {
+  killTimer()
+})

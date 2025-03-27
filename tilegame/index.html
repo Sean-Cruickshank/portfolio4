@@ -14,7 +14,7 @@
     </div>
     
     <div class="control-panel">
-      <button class="reset-score-button" onclick=resetHighScore()>Reset Highscore</button>
+      <button class="reset-score-button">Reset Highscore</button>
       <select class="colour-select js-colour-select" name="colour" id="colour-select">
         <option value="blue">Blue</option>
         <option value="red">Red</option>
@@ -29,8 +29,8 @@
       
       <p class="js-tip tip hidden">Reset the board at any time by hitting the 'Enter' key!</p>
       <p class="js-timer timer">30.0</p>
-      <button class="js-start-game-button start-game-button" onclick=playGame()>Start</button>
-      <button class="js-stop-game-button stop-game-button hidden" onclick=killTimer()>Stop</button>
+      <button class="js-start-game-button start-game-button">Start</button>
+      <button class="js-stop-game-button stop-game-button hidden">Stop</button>
     </div>
   </div>
   <div class="js-end-message end-message hidden">
@@ -38,6 +38,5 @@
   </div>
   
   <script type="module" src="tilegame.js"></script>
-  <script type="module" src="../test.js"></script>
 </body>
 </html>
