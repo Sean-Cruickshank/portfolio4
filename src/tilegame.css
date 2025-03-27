@@ -58,49 +58,49 @@ button:hover {
 }
 
 .player-icon {
-  background-image: url(../../images/tilegame/player-blue.png);
+  background-image: url(/images/tilegame/player-blue.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .player-icon-blue {
-  background-image: url(../app/images/tilegame/player-blue.png);
+  background-image: url(/images/tilegame/player-blue.png);
 }
 
 .player-icon-red {
-  background-image: url(../app/images/tilegame/player-red.png);
+  background-image: url(/images/tilegame/player-red.png);
 }
 
 .player-icon-yellow {
-  background-image: url(../app/images/tilegame/player-yellow.png);
+  background-image: url(/images/tilegame/player-yellow.png);
 }
 
 .player-icon-green {
-  background-image: url(../app/images/tilegame/player-green.png);
+  background-image: url(/images/tilegame/player-green.png);
 }
 
 .player-icon-teal {
-  background-image: url(../app/images/tilegame/player-teal.png);
+  background-image: url(/images/tilegame/player-teal.png);
 }
 
 .player-icon-purple {
-  background-image: url(../app/images/tilegame/player-purple.png);
+  background-image: url(/images/tilegame/player-purple.png);
 }
 
 .player-icon-orange {
-  background-image: url(../app/images/tilegame/player-orange.png);
+  background-image: url(/images/tilegame/player-orange.png);
 }
 
 .key {
-  background-image: url(../app/images/tilegame/key.png);
+  background-image: url(/images/tilegame/key.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .floor-one {
-  background-image: url(../app/images/tilegame/grass.png);
+  background-image: url(/images/tilegame/grass.png);
   background-attachment: fixed;
 }
 
@@ -109,7 +109,7 @@ button:hover {
 }
 
 .floor-two {
-  background-image: url(../app/images/tilegame/dirt.png);
+  background-image: url(/images/tilegame/dirt.png);
   background-attachment: fixed;
 }
 
@@ -118,7 +118,7 @@ button:hover {
 }
 
 .floor-three {
-  background-image: url(../app/images/tilegame/ice.png);
+  background-image: url(/images/tilegame/ice.png);
   background-attachment: fixed;
 }
 
@@ -127,7 +127,7 @@ button:hover {
 }
 
 .floor-four {
-  background-image: url(../app/images/tilegame/rock.png);
+  background-image: url(/images/tilegame/rock.png);
   background-attachment: fixed;
 }
 
@@ -136,7 +136,7 @@ button:hover {
 }
 
 .floor-five {
-  background-image: url(../app/images/tilegame/space.png);
+  background-image: url(/images/tilegame/space.png);
   background-attachment: fixed;
 }
 

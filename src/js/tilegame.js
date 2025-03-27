@@ -64,7 +64,6 @@ function plateCreator(icon, x, y) {
 const gameElement = document.querySelector('.js-game');
 
 const selectElement = document.querySelector('.js-colour-select');
-console.log(selectElement.value)
 
 const playerColour = 'orange'
 
@@ -131,7 +130,7 @@ function playGame() {
       resetHighScoreButton.disabled = true
       resetHighScoreButton.classList.add('button-disabled')
     } else {
-      setColourPicker()
+      // setColourPicker()
       selectElement.disabled = false;
       selectElement.classList.remove('button-disabled')
       resetHighScoreButton.disabled = false
@@ -162,9 +161,6 @@ function generateEndMessage() {
   } else if (highScore - score >= 3) {
     endMessage = 'Better luck next time!'
   }
-//   return `Game over! ${endMessage}
-// Your score: ${score}
-// High score: ${highScore}`
 
 endMessageElement.innerHTML =
   `
@@ -248,7 +244,8 @@ function checkPos(move) {
 }
 
 function setColourPicker() {
-selectElement.innerHTML = `
+  console.log('test')
+  selectElement.innerHTML = `
   <select class="colour-select js-colour-select" name="colour" id="colour-select">
     <option value="blue">Blue</option>
     <option value="red">Red</option>

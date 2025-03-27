@@ -17,7 +17,7 @@ export const projectData = [
   },
   {
     title: "Tile Game",
-    link: "/app/tilegame.html",
+    link: "/src/tilegame.html",
     date: "2024",
     image: "images/tile_game.png",
     tagsText: [
