@@ -296,9 +296,28 @@ i {
 .about {
   text-align: center;
   margin-inline: auto;
-  min-height: 500px;
+  min-height: 550px;
+  background-color: red;
 }
-
+@media (min-width: 768px) {
+  .about {
+    min-height: 625px;
+  }
+}
+@media (min-width: 992px) {
+  .about {
+    min-height: 675px;
+  }
+}
+.about__button {
+  margin-top: 25px;
+}
+.about__facts {
+  background-color: green;
+}
+.about__facts h3 {
+  padding-top: 0;
+}
 .about__facts i {
   font-weight: bold;
   font-style: italic;

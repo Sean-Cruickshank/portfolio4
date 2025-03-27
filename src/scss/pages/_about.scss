@@ -1,11 +1,34 @@
+@use '../util' as u;
+
 .about {
   text-align: center;
   margin-inline: auto;
-  min-height: 500px;
-}
+  min-height: 550px;
+  background-color: red;
 
-.about__facts i {
-  font-weight: bold;
-  font-style: italic;
-  text-decoration: underline;
+  @include u.breakpoint(medium) {
+    min-height: 625px;
+  }
+
+  @include u.breakpoint(large) {
+    min-height: 675px;
+  }
+
+  &__button {
+    margin-top: 25px;
+  }
+
+  &__facts {
+    background-color: green;
+  }
+
+  &__facts h3 {
+    padding-top: 0;
+  }
+
+  &__facts i {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+  }
 }
