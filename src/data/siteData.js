@@ -1,35 +1,12 @@
-// Array of alternate subtitles
-export const subtitleArray = [
-  "I hope I remembered to pay the power bill",
-  "I hope this looks okay in light mode...",
-  "Why is it so dark in here?",
-  "Can you please leave that on?"
-]
-
-// All the different theme colours for the glowing effect
-export const colourList = ['blue', 'green', 'purple', 'yellow']
-
-// All single-use classes that should receive the '.glowing' class and respective colour theme
+// All single-use classes that should receive the '.active' class and respective colour theme
 // ie the ones using querySelector
-export const glowingArray = [
+export const fadeInArray = [
   '.welcome__title',
   '.welcome__subtitle',
   '.welcome__arrow',
   '.social__github',
   '.social__linkedin',
   '.about__button'
-]
-
-// All multi-use classes that should receive the '.glowing' class and respective colour theme
-// ie the ones using querySelectorAll
-export const glowingArrayAll = [
-  '.heading',
-  '.paragraph',
-  '.skills__icon',
-  '.skills__description',
-  '.projects__icon',
-  '.projects__link',
-  '.contact__icon'
 ]
 
 // Array of all sidenav links

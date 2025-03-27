@@ -16,7 +16,7 @@
     margin-bottom: 0;
     transition: 1s;
     opacity: 0;
-    color: var(--text);
+    color: var(--grey);
     padding-top: 50px;
   }
 
@@ -33,7 +33,7 @@
 
     &.active {
       text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
-      color: var(--text);
+      color: var(--grey);
       transition: 0.5s;
       transform: translateY(100%);
       cursor: pointer;
@@ -66,7 +66,7 @@
 
 .social a {
   pointer-events: none;
-  color: var(--text);
+  color: var(--grey);
 }
 
 .social i {
@@ -75,11 +75,6 @@
 
 .colour-picker-active i {
   text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
-}
-
-.lights {
-  position: relative;
-  width: 100%;
 }
 
 .colour-picker {
@@ -93,22 +88,6 @@
   transition: 0.4s;
   z-index: 1;
   overflow: hidden;
-  
-  &--blue {
-    color: var(--blue);
-  }
-
-  &--green {
-    color: var(--green);
-  }
-
-  &--purple {
-    color: var(--purple);
-  }
-
-  &--yellow {
-    color: var(--yellow);
-  }
 
   &.active {
     width: 80%;

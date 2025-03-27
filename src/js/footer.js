@@ -1,5 +1,5 @@
-import { projectData } from "../data/projectsData"
-import { contactData } from "./contact"
+import { projectData } from "./projects.js"
+import { contactData } from "./contact.js"
 
 // Setup for the sections links
 const footerDataSections = ["Welcome", "About", "Skills", "Projects", "Qualifications", "Contact"]

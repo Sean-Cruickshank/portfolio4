@@ -1,4 +1,4 @@
-import { colourList, sideNavArray, glowingArray, subtitleArray, glowingArrayAll } from "../data/siteData.js"
+import { sideNavArray, fadeInArray} from "../data/siteData.js"
 
 // Creates the onClick scroll functionality for the sidenav links
 sideNavArray.forEach((page) => {
@@ -7,109 +7,35 @@ sideNavArray.forEach((page) => {
   })
 })
 
-let colourVal = 'blue'
+function loadPage() {
+  //Applies the "active" effect on initial page render
+  fadeInArray.forEach((element) => {
+    // Staggers the GitHub link by 1 second
+    if (element === '.social__github') {
+      setTimeout(() => {
+        document.querySelector(element).classList.add('active')
+      },1000)
 
-let lightbulbFirstTrigger = false;
-let lightStatus = false
+    // Staggers the LinkedIn link by 1.5 seconds
+    } else if (element === '.social__linkedin') {
+      setTimeout(() => {
+        document.querySelector(element).classList.add('active')
+      },1500)
 
-function triggerLightbulb() {
-  lightStatus = !lightStatus
+    // Staggers the welcome arrow by 2 seconds
+    } else if (element === '.welcome__arrow') {
+      setTimeout(() => {
+        document.querySelector(element).classList.add('active')
+      },2000)
 
-  // When the light is turned on
-  if (lightStatus) {
-    // Selects a random entry from the subtitle Array
-    const subtitle = document.querySelector('.welcome__subtitle')
-    const s = Math.floor(Math.random() * subtitleArray.length)
-
-    // Only applies from the second activation onwards
-    if (lightbulbFirstTrigger) {
-      subtitle.innerHTML = subtitleArray[s]
-    // Also reveals the 'skills', 'projects', etc. when the lightbulb is pressed for the first time
+    // All other single-use classes have the effect applied instantly
     } else {
-      lightbulbFirstTrigger = true
-      document.querySelector('.skills').classList.remove('hidden')
-      document.querySelector('.projects').classList.remove('hidden')
-      document.querySelector('.qualifications').classList.remove('hidden')
-      document.querySelector('.about').classList.remove('hidden')
-      document.querySelector('.contact').classList.remove('hidden')
-      document.querySelector('.footer').classList.remove('hidden')
+      document.querySelector(element).classList.add(`active`)
     }
-
-    //Applies the "glowing" effect when the light is turned on
-    glowingArray.forEach((element) => {
-      
-      // Staggers the GitHub link by 1 second
-      if (element === '.social__github') {
-        setTimeout(() => {
-          if (lightStatus) {
-            document.querySelector(element).classList.add(`glowing`)
-          }
-        },1000)
-
-      // Staggers the LinkedIn link by 1.5 seconds
-      } else if (element === '.social__linkedin') {
-        setTimeout(() => {
-          if (lightStatus) {
-            document.querySelector(element).classList.add(`glowing`)
-          }
-        },1500)
-
-      // Staggers the welcome arrow by 2 seconds
-      } else if (element === '.welcome__arrow') {
-        setTimeout(() => {
-          if (lightStatus) {
-            document.querySelector(element).classList.add('active')
-          }
-        },2000)
-
-      // All other single-use classes have the effect applied instantly
-      } else {
-        document.querySelector(element).classList.add(`glowing`)
-      }
-    })
-
-    // Adds the "glowing" effect for all multi-use classes
-    glowingArrayAll.forEach((element) => {
-      document.querySelectorAll(element).forEach((icon) => {
-        icon.classList.add(`glowing`)
-      })
-    })
-
-    // Reveals sections when lightbulb is turned on
-    document.querySelectorAll('.section').forEach((section) => {
-      section.classList.remove('hidden')
-    })
-
-    // When the light is turned off
-  } else {
-    // Removes the "glowing" effect from all single-use classes
-    glowingArray.forEach((element) => {
-      document.querySelector(element).classList.remove('glowing--blue')
-      document.querySelector(element).classList.remove('glowing--green')
-      document.querySelector(element).classList.remove('glowing--purple')
-      document.querySelector(element).classList.remove('glowing--yellow')
-    })
-
-    // Removes the "glowing" effect from all multi-use classes
-    glowingArrayAll.forEach((element) => {
-      document.querySelectorAll(element).forEach((icon) => {
-        icon.classList.remove('glowing--blue', 'glowing--green', 'glowing--purple', 'glowing--yellow')
-      })
-    })
-
-    // Also deactivates the lightbulb and colour picker
-    document.querySelector('.lightbulb').classList.remove('active')
-    document.querySelector('.colour-picker').classList.remove('active')
-    document.querySelector('.welcome__arrow').classList.remove('active')
-
-    // Hides sections when lightbulb is turned off
-    document.querySelectorAll('.section').forEach((section) => {
-      section.classList.add('hidden')
-    })
-  }
+  })
 }
 
-triggerLightbulb()
+loadPage()
 
 window.addEventListener('scroll', () => {
   const position = Math.floor(scrollY);
@@ -143,5 +69,3 @@ window.addEventListener('scroll', () => {
     },750)
   }
 })
-
-console.log('hi')

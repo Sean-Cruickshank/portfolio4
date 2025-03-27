@@ -1,5 +1,5 @@
 html {
-  background: linear-gradient(180deg, #febd71 0px, lightblue 300px, lightblue 80%, #febd71 100%);
+  background: linear-gradient(180deg, var(--orange) 0px, lightblue 300px, lightblue 80%, var(--orange) 100%);
   box-sizing: border-box;
   font-size: 100%;
   min-height: 101%;
@@ -15,12 +15,11 @@ body {
   box-sizing: inherit;
 }
 
-.glowing {
+.active {
   text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.3);
   transition: 0.5s;
   pointer-events: all;
   opacity: 1 !important;
-  color: var(--text);
 }
 
 .hidden {
@@ -44,13 +43,13 @@ body {
 }
 h1 {
   font-family: Agency FB, Agency FB Thin, sans-serif;
-  color: var(--text);
+  color: var(--grey);
   text-transform: uppercase;
 }
 
 h2, h3 {
   font-family: Agency FB, Agency FB Thin, sans-serif;
-  color: var(--text);
+  color: var(--grey);
   text-transform: uppercase;
 }
 
@@ -76,17 +75,17 @@ p {
   font-family: sans-serif;
   font-weight: lighter;
   text-shadow: none !important;
-  color: var(--text);
+  color: var(--grey);
 }
 
 i {
-  color: var(--text);
+  color: var(--grey);
 }
 
 .button {
   border: none;
   border-radius: 0;
-  background: var(--text);
+  background: var(--grey);
   color: white;
   padding: 4px 10px;
   cursor: pointer;
@@ -105,63 +104,9 @@ i {
   transform: scale(0.8);
 }
 
-.lightbulb {
-  margin-top: -22px;
-  margin-right: 5px;
-  border: none;
-  background: none;
-  font-size: clamp(5rem, 3.9412rem + 2.9412vw, 6rem);
-  color: #666;
-  transition: 0.2s;
-  transform: rotate(180deg);
-  cursor: pointer;
-  animation: wiggle 2s infinite;
-  position: relative;
-  z-index: 2;
-}
-.lightbulb.active {
-  color: white;
-  animation: none;
-}
-
-.lightbulb:hover {
-  animation: none;
-  transform: rotate(180deg) scale(0.9);
-}
-
-.lightbulb:active {
-  transform: rotate(180deg) scale(0.8);
-}
-
-@keyframes wiggle {
-  0% {
-    transform: rotate(180deg);
-  }
-  70% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(185deg);
-  }
-  80% {
-    transform: rotate(175deg);
-  }
-  85% {
-    transform: rotate(185deg);
-  }
-  95% {
-    transform: rotate(175deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
 :root {
-  --blue: rgb(159, 255, 215);
-  --green: rgb(178, 255, 159);
-  --purple: rgb(255, 159, 229);
-  --yellow: rgb(253, 255, 159);
-  --text: #333;
+  --grey: #333;
+  --orange: #febd71;
 }
 
 .sidenav {
@@ -204,6 +149,34 @@ i {
     opacity: 1;
   }
 }
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  padding-top: 25px;
+}
+.footer__sections, .footer__projects, .footer__contacts {
+  font-size: 0.8rem;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.footer__sections a, .footer__projects a, .footer__contacts a {
+  color: var(--orange);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.footer i {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--orange);
+}
+
 .welcome {
   display: flex;
   flex-direction: column;
@@ -220,7 +193,7 @@ i {
   margin-bottom: 0;
   transition: 1s;
   opacity: 0;
-  color: var(--text);
+  color: var(--grey);
   padding-top: 50px;
 }
 .welcome__subtitle {
@@ -235,7 +208,7 @@ i {
 }
 .welcome__arrow.active {
   text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
-  color: var(--text);
+  color: var(--grey);
   transition: 0.5s;
   transform: translateY(100%);
   cursor: pointer;
@@ -265,7 +238,7 @@ i {
 
 .social a {
   pointer-events: none;
-  color: var(--text);
+  color: var(--grey);
 }
 
 .social i {
@@ -274,11 +247,6 @@ i {
 
 .colour-picker-active i {
   text-shadow: 0px 0px 15px rgb(255, 255, 255);
-}
-
-.lights {
-  position: relative;
-  width: 100%;
 }
 
 .colour-picker {
@@ -292,18 +260,6 @@ i {
   transition: 0.4s;
   z-index: 1;
   overflow: hidden;
-}
-.colour-picker--blue {
-  color: var(--blue);
-}
-.colour-picker--green {
-  color: var(--green);
-}
-.colour-picker--purple {
-  color: var(--purple);
-}
-.colour-picker--yellow {
-  color: var(--yellow);
 }
 .colour-picker.active {
   width: 80%;
@@ -390,7 +346,7 @@ i {
   animation-iteration-count: 1;
 }
 .skills__icon {
-  color: var(--text);
+  color: var(--grey);
 }
 
 @keyframes fadeIn {
@@ -409,7 +365,7 @@ i {
 }
 .projects__card img {
   width: 300px;
-  border: solid 3px var(--text);
+  border: solid 3px var(--grey);
 }
 .projects__title {
   display: flex;
@@ -434,10 +390,10 @@ i {
 }
 .projects__icon {
   font-size: clamp(2rem, 0.9412rem + 2.9412vw, 3rem);
-  color: var(--text);
+  color: var(--grey);
 }
 .projects__link {
-  color: var(--text);
+  color: var(--grey);
 }
 
 .qualifications {
@@ -471,32 +427,4 @@ i {
 
 .contact .paragraph {
   margin-bottom: 80px;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--text);
-  padding-top: 25px;
-}
-.footer__sections, .footer__projects, .footer__contacts {
-  font-size: 0.8rem;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-}
-.footer__sections a, .footer__projects a, .footer__contacts a {
-  color: #febd71;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.footer i {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  width: -moz-max-content;
-  width: max-content;
-  color: #febd71;
 }/*# sourceMappingURL=main.css.map */

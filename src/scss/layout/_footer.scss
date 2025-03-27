@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: var(--text);
+  background-color: var(--grey);
   padding-top: 25px;
 
   &__sections, &__projects, &__contacts {
@@ -14,7 +14,7 @@
   }
   
   &__sections a, &__projects a, &__contacts a {
-    color: #febd71;
+    color: var(--orange);
     cursor: pointer;
     text-decoration: underline;
   }
@@ -24,5 +24,5 @@
   margin-top: 25px;
   margin-bottom: 25px;
   width: max-content;
-  color: #febd71;
+  color: var(--orange);
 }
