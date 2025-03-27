@@ -1,6 +1,10 @@
+html {
+  background: linear-gradient(180deg, #febd71 0px, lightblue 300px, lightblue 80%, #febd71 100%);
+  min-height: 100vh;
+}
+
 body {
   display: grid;
-  background-color: rgb(30, 30, 30);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1rem;
   line-height: 1.1;
