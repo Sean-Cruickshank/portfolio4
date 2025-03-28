@@ -297,7 +297,6 @@ i {
   text-align: center;
   margin-inline: auto;
   min-height: 550px;
-  background-color: red;
 }
 @media (min-width: 768px) {
   .about {
@@ -311,9 +310,6 @@ i {
 }
 .about__button {
   margin-top: 25px;
-}
-.about__facts {
-  background-color: green;
 }
 .about__facts h3 {
   padding-top: 0;
