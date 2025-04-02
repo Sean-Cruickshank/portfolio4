@@ -3,6 +3,7 @@ html {
   box-sizing: border-box;
   font-size: 100%;
   min-height: 101%;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,8 +29,18 @@ body {
 
 .section {
   text-align: center;
-  width: 65%;
+  width: 75%;
   margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .section {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .section {
+    width: 65%;
+  }
 }
 
 .paragraph {
@@ -39,7 +50,7 @@ body {
 
 @font-face {
   font-family: "Agency FB Thin";
-  src: local("Agency FB"), url(../fonts/AgencyFB-Bold.ttf) format("truetype");
+  src: local("Agency FB"), url(../../fonts/AgencyFB-Bold.ttf) format("truetype");
 }
 h1 {
   font-family: Agency FB, Agency FB Thin, sans-serif;
@@ -54,7 +65,7 @@ h2, h3 {
 }
 
 h2 {
-  font-size: clamp(3rem, 0.8824rem + 5.8824vw, 5rem);
+  font-size: clamp(2.8rem, 0.4706rem + 6.4706vw, 5rem);
   margin-bottom: 0;
 }
 
@@ -158,6 +169,7 @@ i {
 .footer__sections, .footer__projects, .footer__contacts {
   font-size: 0.8rem;
   display: flex;
+  flex-flow: row wrap;
   gap: 20px;
   justify-content: center;
   align-items: center;

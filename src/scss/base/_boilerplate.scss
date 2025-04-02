@@ -1,8 +1,11 @@
+@use '../util' as u;
+
 html {
   background: linear-gradient(180deg, var(--orange) 0px, lightblue 300px, lightblue 80%, var(--orange) 100%);
   box-sizing: border-box;
   font-size: 100%;
   min-height: 101%;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,8 +31,16 @@ body {
 
 .section {
   text-align: center;
-  width: 65%;
+  width: 75%;
   margin-inline: auto;
+
+  @include u.breakpoint(medium) {
+    width: 70%;
+  }
+
+  @include u.breakpoint(large) {
+    width: 65%;
+  }
 }
 
 .paragraph {
