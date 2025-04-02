@@ -1,22 +1,24 @@
 @font-face {
   font-family: 'Agency FB Thin';
-  src: local('Agency FB'), url(../fonts/AgencyFB-Bold.ttf) format('truetype');
+  src: url(./src/fonts/AgencyFB-Bold.ttf) format('truetype');
 }
 
 h1 {
   font-family: 'Agency FB Thin', sans-serif;
+  font-weight: 100;
   color:  var(--grey);
   text-transform: uppercase;
 }
 
 h2, h3 {
-  font-family: 'Agency FB', 'Agency FB Thin', sans-serif;
+  font-family: 'Agency FB Thin', sans-serif;
   color:  var(--grey);
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: clamp(2.6rem, 0.0588rem + 7.0588vw, 5rem);
+  font-size: clamp(2.4rem, -0.3529rem + 7.6471vw, 5rem);
+  font-weight: 100;
   margin-bottom: 0;
 }
 
