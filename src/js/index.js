@@ -78,8 +78,16 @@ hideSidenav.addEventListener('click', () => {
   if (sidenavToggle) {
     hideSidenav.innerHTML = '<i class="fa-solid fa-circle-chevron-right"></i>'
     document.querySelector('.sidenav').style.left = '-40%'
+    setTimeout(() => {
+      document.querySelector('.sidenav').style.display = 'none'
+    },500)
+    
   } else {
     hideSidenav.innerHTML = '<i class="fa-solid fa-circle-chevron-left"></i>'
-    document.querySelector('.sidenav').style.left = '7%'
+    setTimeout(() => {
+      document.querySelector('.sidenav').style.left = '7%'
+    },100)
+    
+    document.querySelector('.sidenav').style.display = 'grid'
   }
 })
