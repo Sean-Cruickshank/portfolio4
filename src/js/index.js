@@ -44,6 +44,7 @@ window.addEventListener('scroll', () => {
   // Reveals the sidenav when the user scrolls more than 25px down
   if (position > 25) {
     document.querySelector('.sidenav').classList.remove('hidden')
+    document.querySelector('.sidenav__toggle').classList.remove('hidden')
   }
 
   // Sets the breakpoints for the 'sidenav--active' class for each sidenav link
@@ -67,5 +68,18 @@ window.addEventListener('scroll', () => {
     setTimeout(() => {
       document.querySelector('.skills__row-three').classList.remove('hidden')
     },750)
+  }
+})
+
+let sidenavToggle = false
+const hideSidenav = document.querySelector('.sidenav__toggle')
+hideSidenav.addEventListener('click', () => {
+  sidenavToggle = !sidenavToggle
+  if (sidenavToggle) {
+    hideSidenav.innerHTML = '<i class="fa-solid fa-circle-chevron-right"></i>'
+    document.querySelector('.sidenav').style.left = '-40%'
+  } else {
+    hideSidenav.innerHTML = '<i class="fa-solid fa-circle-chevron-left"></i>'
+    document.querySelector('.sidenav').style.left = '7%'
   }
 })
