@@ -66,7 +66,7 @@ h2, h3 {
 }
 
 h2 {
-  font-size: clamp(2.4rem, -0.3529rem + 7.6471vw, 5rem);
+  font-size: clamp(3rem, 0.8824rem + 5.8824vw, 5rem);
   font-weight: 100;
   margin-bottom: 0;
 }
@@ -132,7 +132,12 @@ i {
   animation: fadeIn;
   animation-duration: 1s;
   animation-iteration-count: 1;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  .sidenav {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
 }
 .sidenav--active {
   margin-left: 10px;
