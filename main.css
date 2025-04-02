@@ -50,10 +50,10 @@ body {
 
 @font-face {
   font-family: "Agency FB Thin";
-  src: local("Agency FB"), url(../../fonts/AgencyFB-Bold.ttf) format("truetype"), url(../../fonts/AgencyFB-Bold.woff) format("woff"), url(../../fonts/AgencyFB-Bold.woff2) format("woff2");
+  src: local("Agency FB"), url(../fonts/AgencyFB-Bold.ttf) format("truetype");
 }
 h1 {
-  font-family: "Agency FB", "Agency FB Thin", sans-serif;
+  font-family: "Agency FB Thin", sans-serif;
   color: var(--grey);
   text-transform: uppercase;
 }
