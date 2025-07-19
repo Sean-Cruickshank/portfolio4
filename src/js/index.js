@@ -71,19 +71,24 @@ window.addEventListener('scroll', () => {
   }
 })
 
+// Handles the sidenav toggle button
 let sidenavToggle = false
 const hideSidenav = document.querySelector('.sidenav__toggle')
+
 hideSidenav.addEventListener('click', () => {
   sidenavToggle = !sidenavToggle
   if (sidenavToggle) {
     hideSidenav.innerHTML = '<i class="fa-solid fa-circle-chevron-right"></i>'
+    // Sets left positioning to -40% to achieve the swipe offscreen effect
     document.querySelector('.sidenav').style.left = '-40%'
+    // display: none; is delayed by 500ms so that the sidenav doesn't dissappear until it is off screen
     setTimeout(() => {
       document.querySelector('.sidenav').style.display = 'none'
     },500)
     
   } else {
     hideSidenav.innerHTML = '<i class="fa-solid fa-circle-chevron-left"></i>'
+    // left positioning is delayed by 100ms so that the sidenav has rendered back in before the effect begins
     setTimeout(() => {
       document.querySelector('.sidenav').style.left = '7%'
     },100)
